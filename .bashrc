@@ -6,6 +6,7 @@
 
 alias 'mv'='mv -i'
 alias 'cp'='cp -i'
+alias 'rm'='rm -i'
 alias 'ls'='ls --color'
 alias 'fbi'='fbi -T 1'
 alias 'tmux'='tmux -2'
