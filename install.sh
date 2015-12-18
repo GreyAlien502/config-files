@@ -8,3 +8,4 @@ update(){
 
 update .vimrc
 update .bashrc
+update .tmux.conf
