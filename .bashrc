@@ -2,8 +2,6 @@
 # ~/.bashrc
 #
 
-# If not running interactively, don't do anything
-
 alias 'mv'='mv -i'
 alias 'cp'='cp -i'
 alias 'rm'='rm -i'
