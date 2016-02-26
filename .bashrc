@@ -10,6 +10,7 @@ alias 'rm'='rm -i'
 alias 'ls'='ls --color'
 alias 'fbi'='fbi -T 1'
 alias 'tmux'='tmux -2'
+alias 'cmatrix'='cmatrix -ab'
 export EDITOR=vim
 export CLICOLOR=cons25
 export PATH=$PATH:$HOME'/bin'
