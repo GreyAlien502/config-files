@@ -10,6 +10,7 @@ alias 'less'='less -r'
 alias 'fbi'='fbi -T 1'
 alias 'tmux'='tmux -2'
 alias 'cmatrix'='cmatrix -ab'
+alias 'libreoffice'='libreoffice --nologo'
 export EDITOR=vim
 export CLICOLOR=cons25
 export PATH=$PATH:$HOME'/bin'
