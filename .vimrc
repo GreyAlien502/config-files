@@ -6,5 +6,6 @@ let fortran_more_precise=1
 let fortran_do_enddo=1
 syntax on
 set foldmethod=indent
+set mouse=
 ino kj <esc>
 cno kj <c-c>
