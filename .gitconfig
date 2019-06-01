@@ -1,0 +1,5 @@
+[user]
+	name = GreyAlien502
+	email = greyalien502@gmail.com
+[alias]
+	ln = log --graph --reflog
