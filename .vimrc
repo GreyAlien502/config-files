@@ -10,6 +10,7 @@ let fortran_do_enddo=1
 
 syntax on
 set foldmethod=indent
+set matchpairs+=<:>
 
 set mouse=
 

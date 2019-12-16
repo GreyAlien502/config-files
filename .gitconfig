@@ -3,3 +3,6 @@
 	email = greyalien502@gmail.com
 [alias]
 	ln = log --graph --reflog
+[merge]
+	tool = vimdiff
+
