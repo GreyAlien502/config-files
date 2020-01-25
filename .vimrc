@@ -16,8 +16,6 @@ set mouse=
 
 set viminfo='100,<1000,s100,h
 
-color simo-zz-2
-
 inoremap <C-c> <Esc><Esc>
 
 cnoremap <C-a> <Home>
