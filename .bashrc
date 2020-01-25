@@ -5,6 +5,7 @@
 
 HISTSIZE=
 HISTFILESIZE=
+PROMPT_COMMAND='history -a'
 stty -ixon
 shopt -s globstar
 alias 'mv'='mv -i'
