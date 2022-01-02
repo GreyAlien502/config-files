@@ -1,3 +1,6 @@
+#so ~/git/config-files/.vimrc
+#^^^source^^^
+
 set autoindent
 set smartindent
 set shiftwidth=0

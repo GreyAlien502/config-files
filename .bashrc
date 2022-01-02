@@ -1,3 +1,5 @@
+#. ~/git/config-files/.bashrc
+#^^^source^^^
 #
 # ~/.bashrc
 #

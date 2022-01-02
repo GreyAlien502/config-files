@@ -1,3 +1,7 @@
+#[include]
+#	path= ~/git/config-files/.gitconfig
+#^^^source^^^
+
 [user]
 	name = GreyAlien502
 	email = greyalien502@gmail.com

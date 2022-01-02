@@ -1,0 +1,36 @@
+#!/bin/env python3
+
+import os,subprocess,re,sys
+
+dry_run = {
+	(): False,
+	('-n',): True,
+}[tuple(sys.argv[1:])]
+
+for filename in subprocess.check_output('git ls-files'.split()).splitlines():
+	if filename.decode() == os.path.basename(__file__):
+		continue
+	with open(filename,'rb') as file:
+		source_comment = re.match(br'^(.*)\^\^\^source\^\^\^\n',file.read(),re.M|re.S)
+		if not source_comment:
+			print(f"{filename.decode()} has no source comment.")
+			continue
+		source_comment = source_comment.group(1)
+		source_code = re.sub(
+			b'^.{,'+str(len(source_comment.splitlines()[-1])).encode()+b'}',
+			b'',
+			source_comment,
+			flags=re.M
+		)
+	with open(os.path.expanduser(b'~/'+filename),'a+b') as real_file:
+		real_file.seek(0)
+		contents = real_file.read()
+		if contents.startswith(source_code):
+			print(f"{filename.decode()} is already sourced.")
+		else:
+			print(contents)
+			print(f"I'm adding the code to source {filename.decode()}.")
+			print((source_code+b'\n'+contents).decode())
+			if not dry_run:
+				real_file.seek(0)
+				real_file.write(source_code+b'\n'+contents)
