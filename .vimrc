@@ -9,6 +9,7 @@ let fortran_more_precise=1
 let fortran_do_enddo=1
 
 syntax on
+autocmd BufEnter * :syntax sync fromstart
 set foldmethod=indent
 set matchpairs+=<:>
 
@@ -31,4 +32,6 @@ execute "set <M-f>=\ef"
 execute "set <M-d>=\ed"
 cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
+
+nnoremap <F2> :diffthis \| :vnew \| r # \| exe "norm! ggdd" \| :diffthis <return>
 
