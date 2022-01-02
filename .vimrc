@@ -1,5 +1,5 @@
-#so ~/git/config-files/.vimrc
-#^^^source^^^
+"so ~/git/config-files/.vimrc
+"^^^source^^^
 
 set autoindent
 set smartindent
