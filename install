@@ -22,13 +22,12 @@ for filename in subprocess.check_output('git ls-files'.split()).splitlines():
 			source_comment,
 			flags=re.M
 		)
-	with open(os.path.expanduser(b'~/'+filename),'a+b') as real_file:
+	with os.fdopen(os.open(os.path.expanduser(b'~/'+filename),os.O_RDWR|os.O_CREAT),'r+b') as real_file:
 		real_file.seek(0)
 		contents = real_file.read()
 		if contents.startswith(source_code):
 			print(f"{filename.decode()} is already sourced.")
 		else:
-			print(contents)
 			print(f"I'm adding the code to source {filename.decode()}.")
 			print((source_code+b'\n'+contents).decode())
 			if not dry_run:
