@@ -23,4 +23,4 @@ export CLICOLOR=cons25
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 export PYTHONPATH=$HOME/lib/python
 PS1='\[\e[0;32m\]\u\[\e[0;31m\]@\[\e[0;33m\]\H\[\e[40m\]\[\e[0;36m\]:\[\e[0;35m\]\w\[\e[1;33m\]\[\e[1;33m\]\$\[\e[0m\] '
-setxkbmap -rules evdev -layout us -variant dvorak -option ctrl:swap_lalt_lctl_lwin,ctrl:rctrl_ralt
+grep -q . <<<$DISPLAY && setxkbmap -rules evdev -layout us -variant dvorak -option ctrl:swap_lalt_lctl_lwin,ctrl:rctrl_ralt
