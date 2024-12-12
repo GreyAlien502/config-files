@@ -15,6 +15,8 @@ syntax on
 autocmd BufEnter * :syntax sync fromstart
 set foldmethod=indent
 set matchpairs+=<:>
+set listchars=tab:\|\ 
+
 
 set mouse=
 
@@ -37,4 +39,7 @@ cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 
 nnoremap <F2> :diffthis \| :vnew \| r # \| exe "norm! ggdd" \| :diffthis <return>
+nnoremap <F9> g-
+nnoremap <F10> g+
 
+hi Search cterm=NONE ctermfg=yellow ctermbg=blue
